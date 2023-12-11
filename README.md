@@ -1,3 +1,8 @@
+sapt 10:
+ - Am selectat benchmark-ul: **yolo**;
+ - Am selectat toolurile: **pyrat** și **α,β-CROWN**;
+ - Am colectat(pe chat-ul google) și analizat mai multe resurse cu privire la benchmark-ul/toolurile menționate mai sus;
+
 sapt 9: Am explorat mai multe resurse:
  - https://github.com/ChristopherBrix/vnncomp2023_results
  - https://www.semanticscholar.org/reader/9df0b9b69b8caea6e77f59be43a33c7b53e21cb8
