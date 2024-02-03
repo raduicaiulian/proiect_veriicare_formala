@@ -1,0 +1,1 @@
+./run_all_categories.sh v1 /home/test/pyrat/ . pyrat_out.csv pyrat_counterexamples/ collins_yolo_robustness all > pyrat_console_output.txt 2>&1

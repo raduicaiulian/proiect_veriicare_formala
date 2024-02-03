@@ -1,0 +1,2 @@
+# the category can be found in alpha-beta-crown/complete_verifier/vnncomp_main.py
+# ./run_all_categories.sh v1 /home/test/alpha-beta-CROWN/vnncomp_scripts/ . ./out.csv ./counterexamples/ "collins_yolo_robustness" all > console_output.txt 2>&1

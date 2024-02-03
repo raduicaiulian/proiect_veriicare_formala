@@ -1,0 +1,87 @@
+diff --git a/.gitignore b/.gitignore
+index 02a437c..de339a2 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -20,4 +20,8 @@ release
+ .DS_Store
+ *.csv
+ *.out
+-*.txt
+\ No newline at end of file
++*.txt
++#my_ignores
++NVIDIA-Linux-x86_64-535.54.03.run
++cplex_studio2210.linux_x86_64.bin
++miniconda.sh
+diff --git a/vnncomp_scripts/install_tool.sh b/vnncomp_scripts/install_tool.sh
+index 1a357df..bb73e97 100755
+--- a/vnncomp_scripts/install_tool.sh
++++ b/vnncomp_scripts/install_tool.sh
+@@ -5,8 +5,8 @@
+ TOOL_NAME=alpha-beta-CROWN
+ VERSION_STRING=v1
+ if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
+-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
+-	VNNCOMP_PYTHON_LEGACY_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown-2022/bin
++	VNNCOMP_PYTHON_PATH=/home/test/miniconda/envs/alpha-beta-crown/bin
++	VNNCOMP_PYTHON_LEGACY_PATH=/home/test/ubuntu/miniconda/envs/alpha-beta-crown-2022/bin
+ fi
+ 
+ # check arguments
+diff --git a/vnncomp_scripts/post_install_tool.sh b/vnncomp_scripts/post_install_tool.sh
+index ee36bb3..4971496 100755
+--- a/vnncomp_scripts/post_install_tool.sh
++++ b/vnncomp_scripts/post_install_tool.sh
+@@ -3,7 +3,7 @@
+ # Script for setting up Gurobi after running install_tool.sh
+ 
+ if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
+-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
++	VNNCOMP_PYTHON_PATH=/home/test/miniconda/envs/alpha-beta-crown/bin
+ fi
+ 
+ # Get the license from the url which is the final output of install_tool.sh
+@@ -26,7 +26,7 @@ TYPE=ACADEMIC
+ VERSION=10
+ HOSTNAME=ip-172-31-2-36
+ HOSTID=f05ea16f
+-USERNAME=ubuntu
++USERNAME=test
+ EXPIRATION=2024-06-26
+ KEY=CARGFDTM
+ CKEY=CARGFDTM
+@@ -39,4 +39,4 @@ sudo mv gurobi.lic /opt/gurobi/
+ 
+ if grep -q "Using license file /opt/gurobi/gurobi.lic" <<< "$(${VNNCOMP_PYTHON_PATH}/gurobi_cl)"; then
+ 	echo "license setup is successful"
+-fi
+\ No newline at end of file
++fi
+diff --git a/vnncomp_scripts/prepare_instance.sh b/vnncomp_scripts/prepare_instance.sh
+index 690298f..edd2698 100755
+--- a/vnncomp_scripts/prepare_instance.sh
++++ b/vnncomp_scripts/prepare_instance.sh
+@@ -3,8 +3,8 @@
+ TOOL_NAME=alpha-beta-CROWN
+ VERSION_STRING=v1
+ if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
+-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
+-	VNNCOMP_PYTHON_LEGACY_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown-2022/bin
++	VNNCOMP_PYTHON_PATH=/home/test/miniconda/envs/alpha-beta-crown/bin
++	VNNCOMP_PYTHON_LEGACY_PATH=/home/test/miniconda/envs/alpha-beta-crown-2022/bin
+ fi
+ echo $VNNCOMP_PYTHON_PATH
+ 
+diff --git a/vnncomp_scripts/run_instance.sh b/vnncomp_scripts/run_instance.sh
+index 4c500e5..85004bb 100755
+--- a/vnncomp_scripts/run_instance.sh
++++ b/vnncomp_scripts/run_instance.sh
+@@ -2,7 +2,7 @@
+ 
+ VERSION_STRING=v1
+ if [[ -z "${VNNCOMP_PYTHON_PATH}" ]]; then
+-	VNNCOMP_PYTHON_PATH=/home/ubuntu/miniconda/envs/alpha-beta-crown/bin
++	VNNCOMP_PYTHON_PATH=/home/test/miniconda/envs/alpha-beta-crown/bin
+ fi
+ 
+ # check arguments

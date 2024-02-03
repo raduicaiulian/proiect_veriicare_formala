@@ -1,0 +1,2593 @@
+Running measurements with vnncomp folder '.' for tool scripts in '/home/test/alpha-beta-CROWN/vnncomp_scripts/' and saving results to './out.csv'.
+Running collins_yolo_robustness category from ./benchmarks/collins_yolo_robustness/instances.csv
+Category 'collins_yolo_robustness' timeout sum: 21600 seconds
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:36:07 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   38C    P3              11W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 25.732060159
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:36:30 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 4.7631s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib
+Precompiled vnnlib file found at ./benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib.compiled
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+
+**************************
+Model might not be converted correctly. Please check onnx conversion carefully.
+Output by pytorch: [[[2.12458754e+00 1.31440687e+00 5.63815641e+00 ... 2.55973102e-03
+   3.04540317e-03 1.93516817e-02]
+  [1.24455605e+01 9.63846874e+00 5.78120804e+00 ... 2.20763660e-03
+   8.71612877e-03 4.13465425e-02]
+  [1.80579414e+01 4.11297321e+00 1.08436785e+01 ... 9.15057585e-03
+   7.93026201e-03 2.44868062e-02]
+  ...
+  [5.56587830e+02 6.28306458e+02 1.00824524e+02 ... 2.91286316e-02
+   1.02492407e-01 6.94370195e-02]
+  [5.97582642e+02 6.29342041e+02 1.06119774e+02 ... 2.78997403e-02
+   1.01432025e-01 7.71344975e-02]
+  [6.12914246e+02 6.28593262e+02 7.79307251e+01 ... 4.24375683e-02
+   1.15008339e-01 7.52640069e-02]]]
+Output by onnx: [[[2.12458801e+00 1.31440639e+00 5.63815546e+00 ... 2.55978107e-03
+   3.04538012e-03 1.93516612e-02]
+  [1.24455585e+01 9.63846779e+00 5.78121042e+00 ... 2.20760703e-03
+   8.71613622e-03 4.13465798e-02]
+  [1.80579453e+01 4.11298370e+00 1.08436756e+01 ... 9.15059447e-03
+   7.93027878e-03 2.44868696e-02]
+  ...
+  [5.56587830e+02 6.28306458e+02 1.00824615e+02 ... 2.91286409e-02
+   1.02492392e-01 6.94369674e-02]
+  [5.97582642e+02 6.29342041e+02 1.06119789e+02 ... 2.78996825e-02
+   1.01431906e-01 7.71344602e-02]
+  [6.12914246e+02 6.28593262e+02 7.79307632e+01 ... 4.24375236e-02
+   1.15008295e-01 7.52639472e-02]]]
+Max error: tensor(0.00040436)
+**************************
+
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.0004901997745037079, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[2.12458801, 1.31440496, 5.63815594,  ..., 0.04243757, 0.11500828,
+         0.07526400]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[2.12458611, 1.31440353, 5.63815451,  ..., 0.04243756,
+          0.11500828, 0.07526398],
+         [2.12458611, 1.31440353, 5.63815451,  ..., 0.04243756,
+          0.11500828, 0.07526398]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.77947742, -0.63775295,  0.98128313,  0.01871685,  0.02181482,
+           0.97818518,  0.97155535,  0.02844462,  0.99248636,  0.00751367]]],
+       device='cuda:0')
+number of violation:  1
+Result: sat
+Time: 7.983337879180908
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_12673_perturbed_bbox_1_delta_0.001.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 16.088219289
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:36:49 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   42C    P3              12W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 24.605451822
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:37:12 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 4.7703s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib
+Precompiled vnnlib file found at ./benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib.compiled
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+
+**************************
+Model might not be converted correctly. Please check onnx conversion carefully.
+Output by pytorch: [[[7.0506792e+00 3.1872764e+00 1.2761683e+01 ... 2.7751333e-01
+   6.9869785e-03 2.3985282e-02]
+  [7.0248976e+00 3.7286339e+00 1.2786878e+01 ... 3.0889973e-01
+   6.7554824e-03 1.7275499e-02]
+  [1.6731911e+01 3.7344265e+00 1.3158780e+01 ... 1.8896414e-01
+   1.0152430e-02 2.0991495e-02]
+  ...
+  [5.4867676e+02 6.3235083e+02 7.5322609e+01 ... 5.6776978e-02
+   1.9378272e-01 1.6363510e-01]
+  [5.8265430e+02 6.3032550e+02 8.0355080e+01 ... 5.4616325e-02
+   2.0006216e-01 1.6054356e-01]
+  [6.3450018e+02 6.1926495e+02 6.0579414e+01 ... 5.7672277e-02
+   1.3552752e-01 1.1592915e-01]]]
+Output by onnx: [[[7.05068398e+00 3.18726969e+00 1.27616806e+01 ... 2.77512014e-01
+   6.98691607e-03 2.39851773e-02]
+  [7.02492428e+00 3.72863245e+00 1.27868824e+01 ... 3.08899373e-01
+   6.75550103e-03 1.72754526e-02]
+  [1.67319183e+01 3.73443508e+00 1.31587772e+01 ... 1.88963890e-01
+   1.01523995e-02 2.09912956e-02]
+  ...
+  [5.48676758e+02 6.32350830e+02 7.53225250e+01 ... 5.67769408e-02
+   1.93782330e-01 1.63635045e-01]
+  [5.82654236e+02 6.30325562e+02 8.03551102e+01 ... 5.46163619e-02
+   2.00061947e-01 1.60543352e-01]
+  [6.34500183e+02 6.19264954e+02 6.05794220e+01 ... 5.76721132e-02
+   1.35527432e-01 1.15929216e-01]]]
+Max error: tensor(0.00097656)
+**************************
+
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.0014705881476402283, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[ 7.05068207,  3.18723869, 12.76172352,  ...,  0.05767221,
+          0.13552776,  0.11592944]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[ 7.05068302,  3.18723917, 12.76172352,  ...,  0.05767224,
+           0.13552779,  0.11592945],
+         [ 7.05068302,  3.18723917, 12.76172352,  ...,  0.05767224,
+           0.13552779,  0.11592945]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.67339915, -0.55096132,  0.98330158,  0.01669840,  0.03851146,
+           0.96148854,  0.96625030,  0.03374969,  0.99686080,  0.00313922]]],
+       device='cuda:0')
+number of violation:  6
+Result: sat
+Time: 7.759528636932373
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_15588_perturbed_bbox_0_delta_0.005.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 15.872065151
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:37:30 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   44C    P3              11W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 166.530652503
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:40:15 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 4.7507s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib
+Precompiled vnnlib file found at ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib.compiled
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.0029411762952804565, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[ 5.82174969,  2.83675814, 12.93589020,  ...,  0.05325326,
+          0.14514475,  0.09800486]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[ 5.82174587,  2.83675814, 12.93589020,  ...,  0.05325320,
+           0.14514481,  0.09800492],
+         [ 5.82174587,  2.83675814, 12.93589020,  ...,  0.05325320,
+           0.14514481,  0.09800492]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.99992174, -0.83372742,  0.98127288,  0.01872713,  0.61750060,
+           0.38249940,  0.24573410,  0.75426590,  0.99217552,  0.00782447]]],
+       device='cuda:0')
+number of violation:  1
+Result: sat
+Time: 7.9187235832214355
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.01.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 16.036795175
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:40:33 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   49C    P3              12W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 188.705722371
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:43:39 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 4.4371s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib
+1228800 inputs and 277200 outputs in vnnlib
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.004901960492134094, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[ 5.82174969,  2.83675814, 12.93589020,  ...,  0.05325254,
+          0.14514205,  0.09800325]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[ 5.82174587,  2.83675814, 12.93589020,  ...,  0.05325254,
+           0.14514212,  0.09800331],
+         [ 5.82174587,  2.83675814, 12.93589020,  ...,  0.05325254,
+           0.14514212,  0.09800331]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.99992156, -0.83372724,  0.98128855,  0.01871146,  0.61956346,
+           0.38043657,  0.24399453,  0.75600547,  0.99218798,  0.00781200]]],
+       device='cuda:0')
+number of violation:  1
+Result: sat
+Time: 94.1881456375122
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_398_perturbed_bbox_0_delta_0.02.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 101.048402810
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:45:23 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   42C    P3              11W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 108.656515830
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:47:09 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 2.9112s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib
+Precompiled vnnlib file found at ./benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib.compiled
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.011274509131908417, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[ 8.40874958,  3.55119896, 12.52225590,  ...,  0.02913511,
+          0.09185940,  0.05984372]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[ 8.40874958,  3.55119896, 12.52225971,  ...,  0.02913510,
+           0.09185938,  0.05984370],
+         [ 8.40874958,  3.55119896, 12.52225971,  ...,  0.02913510,
+           0.09185938,  0.05984370]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.86512327, -0.70782483,  0.96070415,  0.03929587,  0.08377117,
+           0.91622883,  0.94730496,  0.05269502,  0.96698159,  0.03301839]]],
+       device='cuda:0')
+number of violation:  1
+Result: sat
+Time: 4.816462755203247
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_14421_perturbed_bbox_0_delta_0.05.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 9.841921163
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' with vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib' and timeout '3600'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx' and vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:47:22 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   39C    P3              11W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 107.432968314
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx', vnnlib file './benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib', results file out.txt, and timeout 3600
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/layer.py:29: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /opt/conda/conda-bld/pytorch_1646755888534/work/torch/csrc/utils/tensor_numpy.cpp:178.)
+  layer.weight.data = torch.from_numpy(numpy_helper.to_array(weight))
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/attribute.py:101: UserWarning: Pytorch's interpolate uses no coordinate_transformation_mode=asymmetric. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no cubic_coeff_a. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/operations/resize.py:16: UserWarning: Pytorch's interpolate uses no nearest_mode. Result might differ.
+  warnings.warn(
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: patches
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: false
+  csv_name: instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2023_benchmarks/benchmarks/collins_yolo_robustness
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: '''Reshape'': ''fix_batch_size'': True'
+  input_shape: null
+  onnx_loader: default_onnx_and_vnnlib_loader
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: true
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 1
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: forward+backward
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 3600.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: sb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.1
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: before
+  pgd_steps: 200
+  pgd_restarts: 10
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:49:07 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 2.8853s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx
+Using vnnlib ./benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib
+Precompiled vnnlib file found at ./benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib.compiled
+Loading onnx ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx wih quirks {'Reshape': {'fix_batch_size': True}}
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 80, 80]), new shape is tensor([-1,  3, 11, 80, 80]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 80, 80, 11]), new shape is tensor([   -1, 19200,    11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 40, 40]), new shape is tensor([-1,  3, 11, 40, 40]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 40, 40, 11]), new shape is tensor([  -1, 4800,   11]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 33, 20, 20]), new shape is tensor([-1,  3, 11, 20, 20]).
+Enabling quirks for Reshape operation: fix the first dimension shape to be -1 to support batchsize != 1.
+input shape torch.Size([1, 3, 20, 20, 11]), new shape is tensor([  -1, 1200,   11]).
+
+**************************
+Model might not be converted correctly. Please check onnx conversion carefully.
+Output by pytorch: [[[5.55284882e+00 5.27525711e+00 8.75336170e+00 ... 6.37408867e-02
+   4.17930586e-03 2.34862231e-02]
+  [1.13528376e+01 4.95353222e+00 9.54235649e+00 ... 5.89810908e-02
+   8.56936723e-03 3.50794122e-02]
+  [1.93802624e+01 5.91835403e+00 1.08568735e+01 ... 1.24821560e-02
+   1.05077261e-02 3.54613215e-02]
+  ...
+  [5.49040771e+02 6.24765625e+02 1.94420563e+02 ... 1.37863243e-02
+   4.54176888e-02 3.44845243e-02]
+  [5.81055420e+02 6.24845581e+02 1.80386444e+02 ... 1.52284428e-02
+   5.18224649e-02 4.06754613e-02]
+  [6.10199524e+02 6.26776489e+02 1.31810776e+02 ... 2.26313733e-02
+   5.69998957e-02 4.59065661e-02]]]
+Output by onnx: [[[5.55285454e+00 5.27525330e+00 8.75336647e+00 ... 6.37407899e-02
+   4.17929888e-03 2.34861970e-02]
+  [1.13528309e+01 4.95353508e+00 9.54234886e+00 ... 5.89810908e-02
+   8.56938958e-03 3.50793898e-02]
+  [1.93802700e+01 5.91836452e+00 1.08568783e+01 ... 1.24821663e-02
+   1.05077624e-02 3.54614258e-02]
+  ...
+  [5.49040771e+02 6.24765625e+02 1.94420563e+02 ... 1.37862861e-02
+   4.54176366e-02 3.44845057e-02]
+  [5.81055420e+02 6.24845581e+02 1.80386414e+02 ... 1.52284205e-02
+   5.18224537e-02 4.06754017e-02]
+  [6.10199524e+02 6.26776489e+02 1.31810715e+02 ... 2.26313770e-02
+   5.69998622e-02 4.59065139e-02]]]
+Max error: tensor(0.00038910)
+**************************
+
+Attack parameters: initialization=uniform, steps=200, restarts=10, alpha=0.022058822214603424, initialization=uniform, GAMA=False
+Model output of first 5 examples:
+ tensor([[5.55284309, 5.27525806, 8.75336170,  ..., 0.02264171, 0.05701698,
+         0.04591678]], device='cuda:0')
+Clean prediction incorrect, attack skipped.
+Adv example prediction (first 2 examples and 2 restarts):
+ tensor([[[5.55284309, 5.27525806, 8.75336170,  ..., 0.02264172,
+          0.05701701, 0.04591679],
+         [5.55284309, 5.27525806, 8.75336170,  ..., 0.02264172,
+          0.05701701, 0.04591679]]], device='cuda:0')
+PGD attack margin (first 2 examles and 10 specs):
+ tensor([[[ 0.71699011, -0.58662736,  0.96058524,  0.03941476,  0.24582928,
+           0.75417072,  0.79861224,  0.20138778,  0.97644925,  0.02355072]]],
+       device='cuda:0')
+number of violation:  1
+Result: sat
+Time: 4.751481771469116
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp23/collins_yolo_robustness.yaml --precompile_jit --onnx_path ./benchmarks/collins_yolo_robustness/onnx/yolov5nano_LRelu_640.onnx --vnnlib_path ./benchmarks/collins_yolo_robustness/vnnlib/img_12761_perturbed_bbox_2_delta_0.1.vnnlib --results_file out.txt --timeout 3600.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: sat, Runtime: 10.444160199
+Appending result 'sat' to csv file './out.csv'
+Doing run_single_instance with category 'collins_yolo_robustness' on onnx network './benchmarks/test/test_nano.onnx' with vnnlib file './benchmarks/test/test_nano.vnnlib' and timeout '120'
+/home/test/miniconda/envs/alpha-beta-crown/bin
+Preparing alpha-beta-CROWN for benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/test/test_nano.onnx' and vnnlib file './benchmarks/test/test_nano.vnnlib'
+TOOL_DIR is /home/test/alpha-beta-CROWN
+rmmod: ERROR: Module nvidia_drm is not currently loaded
+rmmod: ERROR: Module nvidia_modeset is not currently loaded
+Enabled persistence mode for GPU 00000000:01:00.0.
+All done.
+Fri Jan 26 21:49:21 2024       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.154.05             Driver Version: 535.154.05   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce GTX 1650        On  | 00000000:01:00.0 Off |                  N/A |
+| N/A   40C    P0              12W /  50W |      0MiB /  4096MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+Running warmup...
+
+Preparation time is roughly 180 seconds for collins_yolo_robustness
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Preparation finished.
+prepare_instance.sh exit code: 0, runtime: 14.000044869
+
+Running benchmark instance in category 'collins_yolo_robustness' with onnx file './benchmarks/test/test_nano.onnx', vnnlib file './benchmarks/test/test_nano.vnnlib', results file out.txt, and timeout 120
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:121: DeprecationWarning: pkg_resources is deprecated as an API
+  warnings.warn("pkg_resources is deprecated as an API", DeprecationWarning)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/pkg_resources/__init__.py:2870: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('google')`.
+Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+  declare_namespace(pkg)
+/home/test/miniconda/envs/alpha-beta-crown/lib/python3.9/site-packages/onnx2pytorch/convert/model.py:151: UserWarning: Using experimental implementation that allows 'batch_size > 1'.Batchnorm layers could potentially produce false outputs.
+  warnings.warn(
+Configurations:
+
+general:
+  device: cuda
+  seed: 100
+  conv_mode: matrix
+  deterministic: false
+  double_fp: false
+  loss_reduction_func: sum
+  sparse_alpha: true
+  sparse_interm: true
+  save_adv_example: true
+  eval_adv_example: false
+  show_adv_example: false
+  precompile_jit: true
+  complete_verifier: bab
+  enable_incomplete_verification: true
+  csv_name: test_instances.csv
+  results_file: out.txt
+  root_path: ../../vnncomp2021/benchmarks/test
+  deterministic_opt: false
+  graph_optimizer: 'Customized("custom_graph_optimizer", "default_optimizer")'
+  no_batchdim_buffers: false
+  save_output: false
+  output_file: out.pkl
+model:
+  name: null
+  path: null
+  onnx_path: ./benchmarks/test/test_nano.onnx
+  onnx_path_prefix: ''
+  cache_onnx_conversion: false
+  debug_onnx: false
+  onnx_quirks: null
+  input_shape: [-1, 1]
+  onnx_loader: 'Customized("custom_model_loader", "customized_TEST_loader")'
+  onnx_optimization_flags: none
+  onnx_vnnlib_joint_optimization_flags: none
+  check_optmized: false
+  flatten_final_output: false
+  optimize_graph: null
+data:
+  start: 0
+  end: 10000
+  select_instance: null
+  num_outputs: 10
+  mean: 0.0
+  std: 1.0
+  pkl_path: null
+  dataset: null
+  data_filter_path: null
+  data_idx_file: null
+specification:
+  type: lp
+  robustness_type: verified-acc
+  norm: .inf
+  epsilon: null
+  epsilon_min: 0.0
+  vnnlib_path: ./benchmarks/test/test_nano.vnnlib
+  vnnlib_path_prefix: ''
+  rhs_offset: null
+solver:
+  batch_size: 64
+  auto_enlarge_batch_size: false
+  min_batch_size_ratio: 0.1
+  use_float64_in_last_iteration: false
+  early_stop_patience: 10
+  start_save_best: 0.5
+  bound_prop_method: alpha-crown
+  init_bound_prop_method: same
+  prune_after_crown: false
+  crown:
+    batch_size: 1000000000
+    max_crown_size: 1000000000
+  alpha-crown:
+    alpha: true
+    lr_alpha: 0.1
+    iteration: 100
+    share_alphas: false
+    lr_decay: 0.98
+    full_conv_alpha: true
+    max_coeff_mul: .inf
+    matmul_share_alphas: false
+    apply_output_constraints_to: []
+    disable_optimization: []
+  beta-crown:
+    lr_alpha: 0.01
+    lr_beta: 0.05
+    lr_decay: 0.98
+    optimizer: adam
+    iteration: 50
+    beta: true
+    beta_warmup: true
+    enable_opt_interm_bounds: false
+    all_node_split_LP: false
+  forward:
+    refine: false
+    dynamic: false
+    max_dim: 10000
+  multi_class:
+    label_batch_size: 32
+    skip_with_refined_bound: true
+  mip:
+    parallel_solvers: null
+    solver_threads: 1
+    refine_neuron_timeout: 15
+    refine_neuron_time_percentage: 0.8
+    early_stop: true
+    adv_warmup: true
+    mip_solver: gurobi
+    skip_unsafe: false
+bab:
+  initial_max_domains: 1
+  max_domains: .inf
+  decision_thresh: 0
+  timeout: 120.0
+  timeout_scale: 1
+  override_timeout: null
+  get_upper_bound: false
+  dfs_percent: 0.0
+  pruning_in_iteration: true
+  pruning_in_iteration_ratio: 0.2
+  sort_targets: false
+  batched_domain_list: true
+  optimized_interm: ''
+  interm_transfer: true
+  recompute_interm: false
+  sort_domain_interval: -1
+  vanilla_crown: false
+  cut:
+    enabled: false
+    implication: false
+    bab_cut: false
+    lp_cut: false
+    method: null
+    lr: 0.01
+    lr_decay: 1.0
+    iteration: 100
+    bab_iteration: -1
+    early_stop_patience: -1
+    lr_beta: 0.02
+    number_cuts: 50
+    topk_cuts_in_filter: 1000
+    batch_size_primal: 100
+    max_num: 1000000000
+    patches_cut: false
+    cplex_cuts: false
+    cplex_cuts_wait: 0
+    cplex_cuts_revpickup: true
+    cut_reference_bounds: true
+    fix_intermediate_bounds: false
+  branching:
+    method: kfsb
+    candidates: 3
+    reduceop: min
+    enable_intermediate_bound_opt: false
+    branching_input_and_activation: false
+    branching_input_and_activation_order: [input, relu]
+    branching_input_iterations: 30
+    branching_relu_iterations: 50
+    sb_coeff_thresh: 0.001
+    nonlinear_split:
+      method: shortcut
+      branching_point_method: uniform
+      num_branches: 2
+      branching_point_refinement: false
+      filter: false
+      filter_beta: false
+      filter_batch_size: 10000
+      filter_iterations: 25
+      shortlist_size: 500
+      loose_tanh_threshold: null
+    new_input_split:
+      enable: false
+      batch_size: 2
+      rounds: 1
+      init_alpha_batch_size: 8192
+      full_alpha: false
+    input_split:
+      enable: true
+      enhanced_bound_prop_method: alpha-crown
+      enhanced_branching_method: naive
+      enhanced_bound_patience: 100000000.0
+      attack_patience: 100000000.0
+      adv_check: 0
+      split_partitions: 2
+      sb_margin_weight: 1.0
+      sb_primary_spec: null
+      sb_primary_spec_iter: 1
+      sb_sum: false
+      bf_backup_thresh: -1
+      bf_rhs_offset: 0
+      bf_zero_crossing_score: false
+      ibp_enhancement: false
+      catch_assertion: false
+      compare_with_old_bounds: false
+      update_rhs_with_attack: false
+  attack:
+    enabled: false
+    beam_candidates: 8
+    beam_depth: 7
+    max_dive_fix_ratio: 0.8
+    min_local_free_ratio: 0.2
+    mip_start_iteration: 5
+    mip_timeout: 30.0
+    adv_pool_threshold: null
+    refined_mip_attacker: false
+    refined_batch_size: null
+attack:
+  pgd_order: input_bab
+  pgd_steps: 100
+  pgd_restarts: 30
+  pgd_batch_size: 100000000
+  pgd_early_stop: true
+  pgd_lr_decay: 0.99
+  pgd_alpha: auto
+  pgd_loss_mode: null
+  enable_mip_attack: false
+  adv_saver: default_adv_saver
+  early_stop_condition: default_early_stop_condition
+  adv_example_finalizer: default_adv_example_finalizer
+  pgd_loss: default_pgd_loss
+  cex_path: ./test_cex.txt
+  attack_mode: PGD
+  attack_tolerance: 0.0
+  attack_func: attack_with_general_specs
+  gama_lambda: 10.0
+  gama_decay: 0.9
+  check_clean: false
+  input_split:
+    pgd_steps: 100
+    pgd_restarts: 30
+    pgd_alpha: auto
+  input_split_enhanced:
+    pgd_steps: 200
+    pgd_restarts: 500000
+    pgd_alpha: auto
+  input_split_check_adv:
+    pgd_steps: 5
+    pgd_restarts: 5
+    pgd_alpha: auto
+    max_num_domains: 10
+debug:
+  view_model: false
+  lp_test: null
+  rescale_vnnlib_ptb: null
+  test_optimized_bounds: false
+  test_optimized_bounds_after_n_iterations: 0
+
+Experiments at Fri Jan 26 21:49:33 2024 on test-Legion-Y540-17IRH-PG0
+Pre-compile jit kernels on a toy network...
+JIT kernels compiled in 3.6569s.
+Internal results will be saved to out.txt.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% idx: 0, vnnlib ID: 0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using onnx ./benchmarks/test/test_nano.onnx
+Using vnnlib ./benchmarks/test/test_nano.vnnlib
+Loading onnx ./benchmarks/test/test_nano.onnx wih quirks {}
+Precompiled vnnlib file found at ./benchmarks/test/test_nano.vnnlib.compiled
+Linear layers are transposed in this model.
+Model: BoundedModule(
+  (/0): BoundInput(name=/0, inputs=[], perturbed=True)
+  (/1): BoundParams(name=/1, inputs=[], perturbed=False)
+  (/2): BoundParams(name=/2, inputs=[], perturbed=False)
+  (/input): BoundLinear(name=/input, inputs=[/0, /1, /2], perturbed=True)
+  (/4): BoundRelu(name=/4, inputs=[/input], perturbed=True)
+)
+Original output: tensor([[0.]], device='cuda:0')
+Split layers:
+  BoundLinear(name=/input, inputs=[/0, /1, /2], perturbed=True): [(BoundRelu(name=/4, inputs=[/input], perturbed=True), 0)]
+Nonlinear functions:
+   BoundRelu(name=/4, inputs=[/input], perturbed=True)
+layer /4 using full alpha with shape torch.Size([1]); unstable size 1; total size 1 ([1, 1])
+layer /4 start_node /4 using full alpha [2, 1, 1, 1] with unstable size None total_size 1 output_shape 1
+Optimizable variables initialized.
+initial CROWN bounds: tensor([[0.]], device='cuda:0') None
+Verified with initial CROWN!
+verified with init bound!
+Result: unsat
+Time: 0.6004226207733154
+
+------------------------- COMMAND ------------------------------
+/home/test/miniconda/envs/alpha-beta-crown/bin/python3 /home/test/alpha-beta-CROWN/complete_verifier/abcrown.py --config /home/test/alpha-beta-CROWN/complete_verifier/exp_configs/vnncomp21/test.yaml --precompile_jit --onnx_path ./benchmarks/test/test_nano.onnx --vnnlib_path ./benchmarks/test/test_nano.vnnlib --results_file out.txt --timeout 120.0 --save_adv_example
+----------------------------------------------------------------
+
+exit code: 0
+run_instance.sh exit code: 0, Result: unsat, Runtime: 7.955929985
+Appending result 'unsat' to csv file './out.csv'
+Timeout of executed instances: 21600 sec

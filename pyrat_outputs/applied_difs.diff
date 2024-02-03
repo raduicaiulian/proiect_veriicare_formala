@@ -1,0 +1,53 @@
+diff --git a/add_result.py b/add_result.py
+old mode 100644
+new mode 100755
+diff --git a/install_tool.sh b/install_tool.sh
+old mode 100644
+new mode 100755
+diff --git a/prepare_instance.sh b/prepare_instance.sh
+old mode 100644
+new mode 100755
+index 48a8ba7..b5e5ae7
+--- a/prepare_instance.sh
++++ b/prepare_instance.sh
+@@ -5,7 +5,7 @@ echo $2
+ echo $3
+ echo $4
+ 
+-PyRAT=/home/ubuntu/toolkit
++PyRAT=/home/test/pyrat
+ 
+ CATEGORY=$2
+ #if [[$CATEGORY="vit" || $CATEGORY = "carvana_unet_2022" || $CATEGORY = "cctsdb_yolo" || $CATEGORY = "ml4acopf"]]
+@@ -22,4 +22,4 @@ mamba activate temp_pyrat
+ 
+ python $PyRAT/pyrat.pyc --read "parsing_only" --model_path $ONNX_FILE --property_path $VNNLIB_FILE \
+ --config $PyRAT/vnn_config/$CATEGORY.ini
+-#fi
+\ No newline at end of file
++#fi
+diff --git a/pyrat.pyc b/pyrat.pyc
+old mode 100644
+new mode 100755
+diff --git a/run_instance.sh b/run_instance.sh
+old mode 100644
+new mode 100755
+index ab95840..7dff86b
+--- a/run_instance.sh
++++ b/run_instance.sh
+@@ -16,7 +16,7 @@ TIMEOUT=$6
+ echo "Running $TOOL_NAME for benchmark instance in category '$CATEGORY' with onnx file '$ONNX_FILE' and vnnlib file
+  '$VNNLIB_FILE' and timeout '$TIMEOUT'. Writing to '$RESULTS_FILE'"
+ 
+-PyRAT=/home/ubuntu/toolkit
++PyRAT=/home/test/pyrat
+ 
+ source "${HOME}/conda/etc/profile.d/conda.sh"
+ source "${HOME}/conda/etc/profile.d/mamba.sh"
+@@ -27,4 +27,4 @@ echo $CATEGORY
+ 
+ python $PyRAT/pyrat.pyc --read "from_pickle" --model_path $ONNX_FILE --property_path $VNNLIB_FILE \
+ --timeout $TIMEOUT --config $PyRAT/vnn_config/$CATEGORY.ini --log_dir $PyRAT/$ONNX_FILE-$VNNLIB_FILE --log_name temp
+-python $PyRAT/add_result.py $PyRAT/$ONNX_FILE-$VNNLIB_FILE/temp $RESULTS_FILE
+\ No newline at end of file
++python $PyRAT/add_result.py $PyRAT/$ONNX_FILE-$VNNLIB_FILE/temp $RESULTS_FILE
